@@ -27,7 +27,7 @@ This describes how to setup and run the ERGO system.
 
 See http://racket-lang.org/. You can test that things are working with
 
-     ```racket
+     ```shell
      > racket -e '(+ 3 4)'
      7
      ```
