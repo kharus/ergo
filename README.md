@@ -28,8 +28,8 @@ This describes how to setup and run the ERGO system.
 See http://racket-lang.org/. You can test that things are working with
 
 ```racket
-    > racket -e '(+ 3 4)'
-    7
+> racket -e '(+ 3 4)'
+7
 ```
 
 ### INSTALLATION OF ERGO
@@ -38,10 +38,10 @@ See http://racket-lang.org/. You can test that things are working with
 
 2. Then find out where Racket keeps user-defined collections.  It's the first element of "`(current-library-collection-paths)`":
 
-     ```racket
-     > racket -e '(car (current-library-collection-paths))'
-     #<path:/Users/hector/Library/Racket/5.2/collects>
-     ```
+   ```racket
+   > racket -e '(car (current-library-collection-paths))'
+   #<path:/Users/hector/Library/Racket/5.2/collects>
+   ```
 
 3. Create the user `/path/to/collects/` directory from (2) if needed, and a new subdirectory inside it called "`ergo`".
 
