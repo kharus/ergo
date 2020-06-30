@@ -27,10 +27,10 @@ This describes how to setup and run the ERGO system.
 
 See http://racket-lang.org/. You can test that things are working with
 
-     ```racket
-     > racket -e '(+ 3 4)'
-     7
-     ```
+```racket
+> racket -e '(+ 3 4)'
+7
+```
 
 ### INSTALLATION OF ERGO
 
@@ -38,30 +38,30 @@ See http://racket-lang.org/. You can test that things are working with
 
 2. Then find out where Racket keeps user-defined collections.  It's the first element of "`(current-library-collection-paths)`":
 
-     ```racket
-     > racket -e '(car (current-library-collection-paths))'
-     #<path:/Users/hector/Library/Racket/5.2/collects>
-     ```
+```racket
+> racket -e '(car (current-library-collection-paths))'
+#<path:/Users/hector/Library/Racket/5.2/collects>
+```
 
 3. Create the user `/path/to/collects/` directory from (2) if needed, and a new subdirectory inside it called "`ergo`".
 
 4. Put a file called `main.ss` in the `ergo/` directory from step (3).  It should contain just the following three lines:
 
-     ```racket
-     (module main racket
-     (require (file "/path/to/implementation/full-system.scm"))
-     (provide (all-from-out (file "/path/to/implementation/full-system.scm"))))
-     ```
+```racket
+(module main racket
+(require (file "/path/to/implementation/full-system.scm"))
+(provide (all-from-out (file "/path/to/implementation/full-system.scm"))))
+```
 
    where the `/path/to/implementation/` is the directory from step (1) above.  
 
 5. Test that ERGO is correctly installed:
 
-     ```racket
-     > racket -l ergo -e '(ergo-do :nil)'
-         Loading ERGO v1.5 (Mar 2018) in Racket 5.2 ...
-     '()
-     ```
+```racket
+> racket -l ergo -e '(ergo-do :nil)'
+    Loading ERGO v1.5 (Mar 2018) in Racket 5.2 ...
+'()
+```
 
 ## RUNNING ERGO 
 
